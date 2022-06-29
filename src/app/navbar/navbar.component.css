@@ -18,7 +18,7 @@ a{
     font-weight: bolder;
 }
 .item{
-    margin-top: 1rem;
+    display: flex;
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -30,6 +30,7 @@ a{
     opacity: 0.5;
     background-color: cornflowerblue;
     font-weight: bolder;
+    box-shadow: inset -5px 0px blue;
 }
 
 img , a{

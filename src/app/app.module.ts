@@ -16,7 +16,6 @@ import { DialogComponent } from './repository/dialog/dialog.component';
 import { MatCommonModule } from '@angular/material/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { dummy_data } from './models/repository_data';
-import { MatIconModule } from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -46,7 +45,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     MatFormFieldModule,
     MatSlideToggleModule,
-    MatIconModule,
     MatInputModule,
     MatSidenavModule,
     FormsModule,

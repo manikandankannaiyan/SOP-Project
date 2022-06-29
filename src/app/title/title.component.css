@@ -2,27 +2,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
     width: 100%;
     height: 5rem;
 }
-mat-icon{
-    color: white;
-    background-color: cornflowerblue;
-    margin: 0px;
-    padding: 0px;
+.item1{
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 .item2{
     display: flex;
+    border: 3px solid cornflowerblue;
 }
 input{
-    border: 2px solid;
+    border: none;
     border-right: none;
 }
 label{
     border: 2px solid;
-    border-left: none;
-    border-right: none;
+    border: none;
     background-color: white;
 }
 select{

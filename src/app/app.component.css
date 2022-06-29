@@ -10,3 +10,8 @@ mat-drawer{
 mat-drawer-content .item2{
     min-height: 15rem;
 }
+
+mat-drawer-content .item1,.item2{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
