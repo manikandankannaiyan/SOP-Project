@@ -19,13 +19,19 @@ a{
 }
 .item{
     margin-top: 1rem;
-    padding: 1rem;
     width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1re;
 }
 .item:hover{
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     width: 100%;
     opacity: 0.5;
     background-color: cornflowerblue;
     font-weight: bolder;
+}
+
+img , a{
+    margin-left: 1rem;
 }

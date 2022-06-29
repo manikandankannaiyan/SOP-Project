@@ -7,3 +7,6 @@ mat-drawer{
     width: 15rem;
     min-height: 702px;
 }
+mat-drawer-content .item2{
+    min-height: 15rem;
+}
