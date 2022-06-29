@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, AfterViewInit, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MatSlideToggleChange } from '@angular/material/slide-toggle';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { dummy_data } from '../models/repository_data';
 import { DialogComponent } from './dialog/dialog.component';
@@ -11,10 +11,12 @@ import { DialogComponent } from './dialog/dialog.component';
   templateUrl: './repository.component.html',
   styleUrls: ['./repository.component.css']
 })
-export class RepositoryComponent implements OnInit {
+export class RepositoryComponent implements OnInit,AfterViewInit {
  
   constructor(private router: Router,public dialog: MatDialog, public sample_data: dummy_data) {}
 
+  @ViewChild(MatPaginator)
+  paginator!: MatPaginator;
   repo_data:any;
   seperate_data:any;
   data:any;
@@ -28,8 +30,12 @@ export class RepositoryComponent implements OnInit {
     })
   }
 
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
   displayedColumns: string[] = ['id','sop_name','description','platform','category','status','Action'];
-  dataSource = this.sample_data.getData();
+  dataSource = new MatTableDataSource(this.sample_data.getData());
   
   openDialog() {
     this.dialog.open(DialogComponent,{data:{pagevalue:this.data}});  
