@@ -1,0 +1,50 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id" >
+      <th mat-header-cell *matHeaderCellDef> <h3>ID.</h3> </th>
+      <td style="color: cornflowerblue;" mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="sop_name">
+      <th mat-header-cell *matHeaderCellDef> <h3>[Infra]SOP Name</h3> </th>
+      <td mat-cell *matCellDef="let element"> {{element.sop_name}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> <h3>Alert Message</h3> </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="platform">
+      <th mat-header-cell *matHeaderCellDef> <h3>Platform</h3> </th>
+      <td mat-cell *matCellDef="let element"> {{element.platform}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef> <h3>Categories</h3> </th>
+        <td style="color: orangered;" mat-cell *matCellDef="let element"> {{element.category}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status" >
+        <th mat-header-cell *matHeaderCellDef> <h3>Status <br>(Disable/Enable)</h3> </th>
+        <td mat-cell *matCellDef="let element">
+        <mat-slide-toggle *ngIf="element.status=== 'completed'" checked="true" color="primary" ></mat-slide-toggle> 
+        <mat-slide-toggle *ngIf="element.status!== 'completed'" checked="false" color="primary" ></mat-slide-toggle>
+     </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> <h3>Action</h3> </th>
+        <td mat-cell *matCellDef="let element"><button style="border: 1px solid red;color: red;margin-right: 1rem; ">Edit</button> <button (click)="open(element)" style="border: 1px solid blue;color: blue" (click)="openDialog()">Run</button> </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

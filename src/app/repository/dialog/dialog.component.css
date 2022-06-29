@@ -1,0 +1,35 @@
+mat-dialog-content{
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+.item1{
+    width: 80%;
+}
+.item2{
+    width: 30rem;
+    height: 30rem;
+    background-color: black;
+}
+.data_group{
+    display: flex;
+}
+.div1{
+    display: flex;
+    margin-right: 3rem;
+}
+p, label, h2{
+    color: cornflowerblue;
+    margin-right: 1rem;
+}
+input, .data_group{
+    margin-top: 2rem;
+}

@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Run Workflow</h2>
+<mat-dialog-content class="mat-typography" *ngIf="single_data">
+    <div class="container">
+        <div class="item1">
+            <form [formGroup]="Sop_repo">
+                <p>
+                    <label>[Infra]SOP Name : </label>
+                    <input matInput formControlName="sop_name" required />
+                </p>
+                <p>
+                    <label>Alert Message : </label>
+                    <input matInput formControlName="alert_msg" required />
+                </p>
+                <div class="data_group">
+                    <div class="div1">
+                        <p>Platform : </p>{{single_data.platform}}
+                    </div>
+                    <div class="div1">
+                        <p>Status : </p>{{single_data.status}}
+                    </div>
+                </div>
+                <p>
+                    <label>Device Name : </label>
+                    <input matInput formControlName="device_name" required />
+                </p>
+            </form>
+        </div>
+        <div class="item2"></div>
+    </div>
+</mat-dialog-content>
