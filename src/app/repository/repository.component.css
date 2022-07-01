@@ -1,8 +1,24 @@
 table{
     width: 100%;
     height: 100%;
+    text-align: center;
+}
+h3{
+    color: steelblue;
+    font-weight: 600;
+    text-align: center;
+}
+button{
+    background-color: white;
+    border-radius: 3px;
 }
 th{
-    color: cornflowerblue;
-    font-weight: bold;
+    background-color: rgb(231, 249, 255);
+}
+:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: steelblue ;
+}
+
+:host ::ng-deep  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: steelblue ;
 }

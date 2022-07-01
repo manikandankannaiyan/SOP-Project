@@ -25,8 +25,8 @@ export class RepositoryComponent implements OnInit,AfterViewInit {
     this.repo_data = this.sample_data.getData()
     
     this.repo_data.forEach((element: any) => {
-      this.seperate_data=element.status
-      console.log(this.seperate_data);    
+      this.seperate_data=element.status  
+
     })
   }
 
@@ -34,7 +34,7 @@ export class RepositoryComponent implements OnInit,AfterViewInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  displayedColumns: string[] = ['id','sop_name','description','platform','category','status','Action'];
+  displayedColumns: string[] = ['sop_id','sop_name','description','platform','category','status','Action'];
   dataSource = new MatTableDataSource(this.sample_data.getData());
   
   openDialog() {
