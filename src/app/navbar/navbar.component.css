@@ -27,18 +27,20 @@ a:hover{
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
-    background-color: rgb(182, 206, 252);
+    color: #007FAC;
+    background-color: #D6E9F1;
     font-weight: bolder;
-    box-shadow: inset -5px 0px blue;
+    box-shadow: inset -5px 0px #006F9F;
 }
 
 a.active{
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
+    color: #007FAC;
     background-color: rgb(182, 206, 252);
     font-weight: bolder;
-    box-shadow: inset -5px 0px blue;
+    box-shadow: inset -5px 0px #006F9F;
 }
 img{
     padding-left: 1rem;

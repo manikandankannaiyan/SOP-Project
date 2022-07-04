@@ -4,7 +4,7 @@ table{
     text-align: center;
 }
 h3{
-    color: steelblue;
+    color: #006299;
     font-weight: 600;
     text-align: center;
 }
@@ -13,12 +13,15 @@ button{
     border-radius: 3px;
 }
 th{
-    background-color: rgb(231, 249, 255);
+    background-color: #E5F3F9;
+}
+td{
+    color: #AAAAAA;
 }
 :host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
-    background-color: steelblue ;
+    background-color: #006899 ;
 }
 
 :host ::ng-deep  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-    background-color: steelblue ;
+    background-color: #006899 ;
 }
