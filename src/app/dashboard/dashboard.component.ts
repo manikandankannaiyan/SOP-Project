@@ -11,5 +11,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  date:string='15 sep 2020'
 
 }

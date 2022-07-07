@@ -9,7 +9,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TitleComponent } from './title/title.component';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RepositoryComponent } from './repository/repository.component';
 import { DialogComponent } from './repository/dialog/dialog.component';
@@ -32,7 +31,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ReportsComponent,
     NavbarComponent,
     HeaderComponent,
-    TitleComponent,
     DialogComponent
   ],
   imports: [
