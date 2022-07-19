@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit, ViewChild } from '@angular/core';
+import { Component,OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -11,7 +11,7 @@ import { DialogComponent } from './dialog/dialog.component';
   templateUrl: './repository.component.html',
   styleUrls: ['./repository.component.css']
 })
-export class RepositoryComponent implements OnInit,AfterViewInit {
+export class RepositoryComponent implements OnInit {
  
   constructor(public dialog: MatDialog, public sample_data: dummy_data, private service:RepositoryService) {}
 
@@ -26,12 +26,7 @@ export class RepositoryComponent implements OnInit,AfterViewInit {
       this.dataSource = new MatTableDataSource<any>(this.repo_data);
       this.dataSource.paginator = this.paginator;   
       console.log(this.repo_data);
-         
     })
-  }
-
-  ngAfterViewInit() {
-    
   }
   postdata={
     "page_number":1,
