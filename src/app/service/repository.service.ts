@@ -11,6 +11,6 @@ export class RepositoryService {
   constructor(private http: HttpClient) { }
 
   getdata(data:any):Observable<any>{
-    return this.http.post<any>(environment.apirootURL, data);
+    return this.http.post<any>(environment.apirootURL+'repository-list/', data);
   }
 }

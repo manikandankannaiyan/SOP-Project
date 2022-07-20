@@ -21,23 +21,23 @@ export class RepositoryComponent implements OnInit {
   data:any;
   
   ngOnInit(): void {
-    this.service.getdata(this.postdata).subscribe((res:any)=>{
+    let postdata={
+      "page_number":1,
+      "count_per_page":10,
+      "filters":{
+              "search_name":"",
+              "search_key":"",
+              "categories":[],
+              "status":[]
+          }
+   }
+    this.service.getdata(postdata).subscribe((res:any)=>{
       this.repo_data=res.data
       this.dataSource = new MatTableDataSource<any>(this.repo_data);
       this.dataSource.paginator = this.paginator;   
       console.log(this.repo_data);
     })
   }
-  postdata={
-    "page_number":1,
-    "count_per_page":10,
-    "filters":{
-            "search_name":"",
-            "search_key":"",
-            "categories":[],
-            "status":[]
-        }
- }
 
   displayedColumns: string[] = ['sop_id','sop_name','description','platform','category','status','Action'];
   public dataSource!: MatTableDataSource<any>;
