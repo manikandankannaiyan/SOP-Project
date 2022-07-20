@@ -35,7 +35,6 @@ export class RepositoryComponent implements OnInit {
       this.repo_data=res.data
       this.dataSource = new MatTableDataSource<any>(this.repo_data);
       this.dataSource.paginator = this.paginator;   
-      console.log(this.repo_data);
     })
   }
 
