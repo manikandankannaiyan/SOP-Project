@@ -31,11 +31,15 @@ export class RepositoryComponent implements OnInit {
               "status":[]
           }
    }
-    this.service.getdata(postdata).subscribe((res:any)=>{
+    this.service.getdata(postdata).subscribe((res:any)=>{      
       this.repo_data=res.data
       this.dataSource = new MatTableDataSource<any>(this.repo_data);
       this.dataSource.paginator = this.paginator;   
-    })
+    },
+    err => {
+      alert(err.error.detail)
+    },
+    )
   }
 
   displayedColumns: string[] = ['sop_id','sop_name','description','platform','category','status','Action'];
